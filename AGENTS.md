@@ -1,0 +1,1 @@
+Always read and fully apply .cursor/rules folder with .md files first, as it extends these instructions.

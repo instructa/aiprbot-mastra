@@ -1,0 +1,33 @@
+---
+description: 
+globs: src/mastra/agents/**
+alwaysApply: false
+---
+# Agent Definition Guide
+
+Agents in this codebase are defined using the `Agent` class from `@mastra/core/agent`. A typical agent is created by instantiating a new `Agent` with a configuration object that specifies its behavior, model, tools, and memory.
+
+## Minimal Example
+```ts
+import { Agent } from '@mastra/core/agent';
+
+export const myAgent = new Agent({
+  name: 'My Agent',
+  instructions: 'Describe the agent\'s purpose and behavior.',
+  model: /* model instance here */,
+  tools: { /* toolName: toolInstance */ },
+  memory: /* memory instance here */,
+});
+```
+
+## Key Properties
+- `name`: The agent's display name.
+- `instructions`: Multiline string or string describing the agent's role and behavior.
+- `model`: The LLM backend and version.
+- `tools`: (Optional) An object mapping tool names to tool instances.
+- `memory`: (Optional) A `Memory` instance, typically configured with a storage backend and options.
+
+## Notes
+- The agent's configuration is passed as a single object to the `Agent` constructor.
+- Tools and memory are optional but recommended for most agents.
+- Instructions should clearly define the agent's purpose and response style.

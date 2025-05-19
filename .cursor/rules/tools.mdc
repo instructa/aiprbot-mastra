@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Tool System
+
+- Tools are defined in [src/mastra/tools/index.ts](mdc:src/mastra/tools/index.ts).
+- Example: The weather tool fetches weather data from an external API.
+- Tools provide external data or actions that agents can use to answer queries or perform tasks.
+- Tools are registered with agents in [src/mastra/agents/index.ts](mdc:src/mastra/agents/index.ts) and used in workflows in [src/mastra/workflows/index.ts](mdc:src/mastra/workflows/index.ts).
+- Tools are invoked by agents or directly by workflow steps as needed.

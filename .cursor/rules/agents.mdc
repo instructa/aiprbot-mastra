@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Agent System
+
+- The agent(s) are defined in [src/mastra/agents/index.ts](mdc:src/mastra/agents/index.ts).
+- Example: The weather agent is configured here, including its instructions, model, tools, and memory.
+- Agents are responsible for processing user queries, using tools as needed, and generating responses.
+- Agents are registered with the main system in [src/mastra/index.ts](mdc:src/mastra/index.ts).
+- Agents are invoked by workflows to provide intelligent responses or actions.

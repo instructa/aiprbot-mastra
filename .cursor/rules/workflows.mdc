@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Workflows Module Guide
+
+The main entry point for workflows is [`src/mastra/workflows/index.ts`](mdc:src/mastra/workflows/index.ts). This file defines and exports the `weatherWorkflow`, a multi-step workflow for weather-based activity planning. The workflow uses:
+
+- **Steps**: Each step is a `Step` instance, such as `fetchWeather` (fetches weather data for a city) and `planActivities` (suggests activities based on the weather).
+- **Schemas**: Input and output validation is handled with `zod` schemas.
+- **Agents**: The workflow leverages an `Agent` for generating activity recommendations using an LLM.
+- **Commit**: The workflow is finalized with `.commit()` and exported for use elsewhere.
+
+The workflow is registered in [`src/mastra/index.ts`](mdc:src/mastra/index.ts) under the `workflows` property of the main `Mastra` instance, making it available to the application.
+
+**Usage pattern:**
+- Define steps with input/output schemas and logic.
+- Chain steps using `.step(...).then(...)` on a `Workflow` instance.
+- Export the workflow for registration in the main Mastra configuration.
+
+**Related files:**
+- [`src/mastra/index.ts`](mdc:src/mastra/index.ts): Registers workflows for the application.
