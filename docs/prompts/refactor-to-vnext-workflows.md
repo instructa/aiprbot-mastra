@@ -1,5 +1,5 @@
 <docs>
-<!-- add related docs here -->
+The docs are in docs/mastra-vnext-workflows.md
 </docs>
 
 <refactoring_goal>
