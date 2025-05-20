@@ -46,7 +46,7 @@ describe('weatherWorkflow smoke test', () => {
   it('executes workflow and returns activities', async () => {
     const run = weatherWorkflow.createRun();
     const result = await run.start({ inputData: { city: 'Paris' } });
-    const step = result.results['plan-activities'];
+    const step = result.steps['plan-activities'];
     expect(step.status).toBe('success');
     if (step.status === 'success') {
       expect(step.output.activities).toContain('Planned activities');
