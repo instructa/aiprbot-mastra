@@ -1,9 +1,11 @@
 ---
 description: 
-globs: 
+globs: src/mastra/workflows/**
 alwaysApply: false
 ---
 # Workflows Module Guide
+
+Always use the new Mastra vNext Workflows.
 
 The main entry point for workflows is [`src/mastra/workflows/index.ts`](mdc:src/mastra/workflows/index.ts). This file defines and exports the `weatherWorkflow`, a multi-step workflow for weather-based activity planning. The workflow uses:
 
